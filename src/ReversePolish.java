@@ -29,14 +29,16 @@ import java.util.EmptyStackException;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main {
+public class ReversePolish {
     private Stack<Integer> s = new Stack<Integer>();
 
     public static void main(String[] args) {
         try {
-            new Main().run();
+            new ReversePolish().run();
         } catch (EmptyStackException e) {
             System.out.println("Stack Underflow");
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic error: " + e.getMessage());
         }
     }
 
